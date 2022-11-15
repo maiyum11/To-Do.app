@@ -4,12 +4,12 @@ let mongoose = require('mongoose');
 
 //connect with book model
 
-let task = require('../models/tasks');
+let Task = require('../models/tasks');
 
 /* READ Operation */
 
 router.get('/',(req,res,next)=>{
-    task.find((err, taskmanager)=>{
+    Task.find((err, taskmanager)=>{
         if(err)
         {
             return console.error(err);
@@ -38,7 +38,7 @@ router.post('/add',(req,res,next)=>{
         "Due_date":req.body.Due_date,
         "Details":req.body.Details
     })
-    Task.create(newtask,(err,task) => {
+    Task.create(newtask,(err,Task) => {
         if(err)
         {
             console.log(err);
@@ -46,7 +46,7 @@ router.post('/add',(req,res,next)=>{
         }
         else
         {
-            res.redirect('/task/tasklist')
+            res.redirect('/tasks')
         }
     })
 });
@@ -61,14 +61,14 @@ router.get('/edit/:id',(req,res,next)=>{
         }
         else
         {
-            res.render('task/edit',{title:'Edit your Task', task:taskToEdit});
+            res.render('task/edit',{title:'Edit your Task', Task:taskToEdit});
         }
     });
 });
 /*Post route for displaying*/
 router.post('/edit/:id',(req,res,next)=>{
     let id=req.params.id;
-    let updateTask = task({
+    let updateTask = Task({
         "_id":id,
         "Task":req.body.Task,
         "Assigned_date":req.body.Assigned_date,
@@ -83,14 +83,15 @@ router.post('/edit/:id',(req,res,next)=>{
         }
         else
         {
-            res.redirect('/task/tasklist');
+            res.redirect('/tasks');
         }
     });
 });
+/*not working - check*/
 /* DELETE Operation */
 router.get('/delete/:id',(req,res,next)=>{
     let id =req.params.id;
-    Task.remove({_id:id},(err)=> {
+    Task.deleteOne({_id:id},(err)=> {
         if(err)
         {
             console.log(err);
@@ -98,7 +99,7 @@ router.get('/delete/:id',(req,res,next)=>{
         }
         else
         {
-            res.redirect('/task/tasklist');
+            res.redirect('/tasks');
         } 
     });
 });

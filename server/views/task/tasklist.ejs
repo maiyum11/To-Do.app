@@ -23,18 +23,18 @@
         <tr class="d-flex">
           <td class="text-center col-2"><%= taskmanager[count].Task %></td>
           <td class="text-center col-2"><%= taskmanager[count].Assigned_date %></td>
-          <td class="text-center col-1"><%= taskmanager[count].Due_Date %></td>
+          <td class="text-center col-1"><%= taskmanager[count].Due_date %></td>
           <td class="text-center col-5"><%= taskmanager[count].Details %></td>
          
           <td class="text-center col-1">
-            <a href="/task/edit/<%= taskmanager[count]._id %>"
-              class="btn btn-primary"
+            <a href="/tasks/edit/<%= taskmanager[count]._id %>"
+              class="btn btn-primary">
             <i class="fas fa-pencil-alt"></i> Edit </a>
           </td>
 
            <td class="text-center col-1">
-            <a href="/task/delete/<%= taskmanager[count]._id %>"
-              class="btn btn-danger"
+            <a href="/tasks/delete/<%= taskmanager[count]._id %>"
+              class="btn btn-danger">
             <i class="fas fa-trash-alt"></i> Delete </a>
           </td>
 

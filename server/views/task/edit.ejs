@@ -1,5 +1,60 @@
 <%- include ../ejs_files/header.ejs %>
 <%- include ../ejs_files/main_nav.ejs %>
+<!-- Content for the Edit page-->
+<div class="container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <h1><%= title %></h1>
+        <form class="form" method="post">
+            <div class="form-group">
+                <label for="TaskTextfield"> Task </label>
+                <input type="text" class="form-control"
+                id="TaskTextfield"
+                placeholder="Enter a new Task"
+                name="Task" 
+                value="<%= Task.Task %>"
+                required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Assigned_dateTextfield"> Assigned Date </label>
+                <input type="text" class="form-control"
+                id="Assigned_dateTextfield"
+                placeholder="Enter the assigned date"
+                name="Assigned_date"
+                value="<%= Task.Assigned_date %>"
+                required>
+            </div>
+            
+            <div class="form-group">
+                <label for="Due_dateTextfield"> Due Date </label>
+                <input type="text" class="form-control"
+                id="Due_dateTextfield"
+                placeholder="Enter a the due date"
+                name="Due_date"
+                value="<%= Task.Due_date %>"
+                required>
+            </div>
+            
+            <div class="form-group">
+                <label for="DetailsTextfield"> Task Detail </label>
+                <textarea type="text" class="form-control"
+                id="DetailsTextfield"
+                placeholder="Enter the details to describe your task"
+                name="Details" required>
+                value="<%= Task.Details %>"
+                </textarea>
+            </div>
+            <br>
+            <button class="btn-btn-primary" type="submit">
+                <i class="fas fa-edit"></i> Done
+            </button>
 
+            <a href="/tasks" class="btn btn-warning">
+                <i class="fas fa-undo"></i>Cancel</a>
+        </form>
+    </div>
+    </div>
+</div>
 <%- include ../ejs_files/bottom_nav.ejs %>
 <%- include ../ejs_files/footer.ejs %>

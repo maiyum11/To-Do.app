@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express.Router();
 
+                        ////////*EDIT THIS*////////
 /* GET home page. */
 app.get('/home', function(req, res, next) {
   res.render(('index'), { title: 'Homepage', section: '2nd year Networking and IT security student' });
