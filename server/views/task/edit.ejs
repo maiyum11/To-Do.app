@@ -40,18 +40,18 @@
                 <label for="DetailsTextfield"> Task Detail </label>
                 <textarea type="text" class="form-control"
                 id="DetailsTextfield"
-                placeholder="Enter the details to describe your task"
+                placeholder="Describe your task"
                 name="Details" required>
                 value="<%= Task.Details %>"
                 </textarea>
             </div>
             <br>
-            <button class="btn-btn-primary" type="submit">
-                <i class="fas fa-edit"></i> Done
+            <button class="btn btn-warning" type="submit">
+                <i class="fas fa-check"></i>
             </button>
 
             <a href="/tasks" class="btn btn-warning">
-                <i class="fas fa-undo"></i>Cancel</a>
+            <i class="fas fa-x"></i></a>
         </form>
     </div>
     </div>

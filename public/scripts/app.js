@@ -6,7 +6,7 @@
         let deleteButtons = document.querySelectorAll('.bth-danger');
         for(button of deleteButtons)
         {
-            button.addEventListener('clicked',(event)=>{
+            button.addEventListener('click',(event)=>{
                 if(!confirm("Are you sure?"))
                 {
                     event.preventDefault();
