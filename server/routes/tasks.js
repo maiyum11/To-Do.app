@@ -5,7 +5,7 @@ let mongoose = require('mongoose');
 //connect with book model
 
 let Task = require('../models/tasks');
-let taskController = require('../controller/tasks')
+let taskController = require('../controller/task')
 
 /* READ Operation */
 
