@@ -78,8 +78,9 @@ nav ul li a:hover::after{
 
 table {
 background-color: rgb(214, 138, 57);
-font-size: 20px;
+font-size: 18px;
 }
+
 /*for tasklist*/
 .container {
 text-align: left;
