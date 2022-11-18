@@ -1,5 +1,5 @@
 <%- include ../ejs_files/header.ejs %>
-<%- include ../ejs_files/main_nav.ejs %>
+<%- include ../ejs_files/nav_task.ejs %>
 <!--The Main content-->
 <main class="container">
     <div class="row">
@@ -9,7 +9,7 @@
     <h5>TASK MANAGER</h5>
     <br>
     <br>
-    <table class= "table table-bordered table-striped table-hover">
+    <table class= "table table-bordered table-striped table-hover" background='\media\table_bg.jpg'>
     <tr class="d-flex">
       <th class="text-center text-white col-2">Task</th>
       <th class="text-center text-white col-2">Assigned Date</th>
@@ -18,7 +18,7 @@
       <th class="text-center text-white col-1">Edit</th>
       <th class="text-center text-white col-1">Delete</th>
     </tr>
-    <!--Repeat the template-->
+    <!--Repeating the template-->
     <% for(let count=0; count < taskmanager.length; count ++) { %>
         <tr class="d-flex">
           <td class="text-center text-white col-2"><%= taskmanager[count].Task %></td>

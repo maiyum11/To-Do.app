@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif
     box-sizing: border-box;
 }
 body{
@@ -11,8 +11,8 @@ body{
 h1{
     color: rgb(254, 254, 254)240, 240;
     text-align: center;
-    font-size: 36px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 46px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 h4 {
 font-size: 16px;
@@ -28,15 +28,16 @@ p{
 h5{
   color: rgb(254, 254, 254)240, 240;
   text-align: center;
-  font-size: 36px;
+  font-size: 46px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   
 }
 h6{
   font-size: small;
 }
 /*to style the wrapper id */
-#wrapper{
-  width: 100%;
+.wrapper{
+  width: 80%;
   height: 100vh;
 }
 .req{
@@ -64,7 +65,7 @@ nav ul li a::after{
   content:'';
   width: 0;
   height: 2px;
-  background: rgb(255, 166, 2);
+  background: rgb(108, 173, 208);
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -74,14 +75,75 @@ nav ul li a::after{
 nav ul li a:hover::after{
   width: 100%;
 }
-.header {
-  margin-top: 1%;
-  font-size: 2px;
-}
+
 table {
 background-color: rgb(214, 138, 57);
+font-size: 20px;
 }
-
+/*for tasklist*/
 .container {
 text-align: left;
+}
+/*for index*/
+.container2 {
+  background-color: #a467e6a9;
+  text-align: left;
+  }
+h3{
+  text-align:center;  
+}
+/*
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #eeff00;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+} */
+.button1 {
+  display: inline-block;
+  border-radius: 48px;
+  background-color: #fbc100;
+  color: #011212;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.2s;
+}
+
+.button1:hover span {
+  padding-right: 20px;
+}
+
+.button1:hover span:after {
+  opacity: 10;
+  right: 0;
 }
