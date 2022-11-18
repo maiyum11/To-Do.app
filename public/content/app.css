@@ -14,10 +14,17 @@ h1{
     font-size: 36px;
     font-family: 'Times New Roman', Times, serif;
 }
+h4 {
+font-size: 16px;
+text-align: center;
+color: pink;
+}
 p{
   text-align: center;
   font-size: 16px;
+  color: rgb(240, 252, 2);
 }
+
 h5{
   color: rgb(254, 254, 254)240, 240;
   text-align: center;
