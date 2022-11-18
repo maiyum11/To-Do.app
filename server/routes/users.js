@@ -2,7 +2,7 @@ var express = require('express');
 var app = express.Router();
 
 /* GET users listing. */
-app.get('/home', function(req, res, next) {
+app.get('/tasks', function(req, res, next) {
   res.send('respond with a resource');
 });
 
