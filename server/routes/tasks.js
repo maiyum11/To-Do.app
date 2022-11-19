@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-//connect with book model
+//connect with task model
 
 let Task = require('../models/tasks');
 let taskController = require('../controller/task')
